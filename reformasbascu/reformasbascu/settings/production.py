@@ -75,3 +75,5 @@ ALLOWED_HOSTS = [
     '*',
 ]
 ########## END SITE CONFIGURATION
+
+STATIC_ROOT = 'staticfiles'
