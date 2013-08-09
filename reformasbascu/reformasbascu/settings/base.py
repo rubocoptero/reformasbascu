@@ -44,7 +44,9 @@ MANAGERS = ADMINS
 
 ########## DATABASE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
-DATABASES['default'] =  dj_database_url.config()
+DATABASES = {
+    'default' : dj_database_url.config()
+}
 ########## END DATABASE CONFIGURATION
 
 
