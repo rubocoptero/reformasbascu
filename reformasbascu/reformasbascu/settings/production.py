@@ -50,7 +50,7 @@ SERVER_EMAIL = EMAIL_HOST_USER
 ########## END EMAIL CONFIGURATION
 
 ########## DATABASE CONFIGURATION
-DATABASES = {}
+
 ########## END DATABASE CONFIGURATION
 
 
@@ -69,5 +69,9 @@ SECRET_KEY = get_env_setting('SECRET_KEY')
 ########## SITE CONFIGURATION
 # Hosts/domain names that are valid for this site
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '.reformasbascu.herokuapp.com', 
+    '.reformasbascu.com',
+    '.reformasbascu-staging.herokuapp.com'
+]
 ########## END SITE CONFIGURATION
