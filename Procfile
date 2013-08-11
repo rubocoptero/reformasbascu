@@ -1,1 +1,1 @@
-web: heroku run python manage.py collectstatic --noinput; gunicorn --pythonpath=reformasbascu reformasbascu.wsgi
+web: heroku run python reformasbascu/manage.py collectstatic --noinput; gunicorn --pythonpath=reformasbascu reformasbascu.wsgi
