@@ -28,8 +28,14 @@ class PhotosManager(models.Manager):
 class Album(TimeStampedModel):
     title = models.CharField(max_length=50, unique=True)
 
+    def __unicode__(self):
+        return self.title
+
 class Photo(TimeStampedModel):
     title = models.CharField(max_length=50, unique=True)
-    album = models.ForeignKey(Album, blank=True)
+    album = models.ForeignKey(Album, blank=True, null=True, default=None)
     photo = models.ImageField(upload_to=get_file_path)
     carousel = models.BooleanField(default=False)
+
+    def __unicode__(self):
+        return self.title

@@ -1,0 +1,358 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="es" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="es" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Bascuñana: reformas y construcciones en Alicante</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="****Rellenar****">
+        <meta name="author" content="@rubocoptero">
+
+        <!-- Styles -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/bootstrap-responsive.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/stapel.css' %}" rel="stylesheet">
+        <link href="{% static 'css/colorbox.css' %}" rel="stylesheet">
+        <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+        <!-- Javascript -->
+        <script src="{% static 'js/lib/modernizr-2.6.2-respond-1.1.0.min.js' %}"></script>
+
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Jockey+One' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Capriola' rel='stylesheet' type='text/css'>
+    </head>
+    <body data-spy="scroll" data-target=".nav" data-offset="50">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#">
+                        <img id="logo" src="{% static 'img/logo.png' %}" alt="Bascuñana">
+                    </a>
+                    <span class=" telefono-cabecera text-center">
+                        <i class="icon-mobile-phone icon-large"><span> 618 87 44 67</span></i>
+                    </span>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="#inicio">Inicio</a></li>
+                            <li><a href="#servicios">Servicios</a></li>
+                            <li><a href="#empresa">La empresa</a></li>
+                            <li><a href="#trabajos">Trabajos</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                        </ul><!-- /.nav -->
+                    </div><!--/.nav-collapse -->
+                </div><!-- /.container -->
+            </div><!-- /.navbar-inner -->
+        </nav><!-- /.navbar -->
+
+        <div id="inicio" class="container">
+            <!--  Carousel -->
+            <div id="this-carousel-id" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <a href="#">  <img src="img/slides/slide-01.jpg" alt="Chalets" />
+                        </a>
+                        <div class="carousel-caption">
+                            <p>Chalets</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="#">  <img src="img/slides/slide-02.jpg" alt="Tiendas" />
+                        </a>
+                        <div class="carousel-caption">
+                            <p>Tiendas</p>
+                        </div>
+                    </div>          
+                </div><!-- .carousel-inner -->
+                <!--  next and previous controls here
+                            href values must reference the id for this carousel -->
+                <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+                <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+            </div><!-- .carousel -->
+            <!-- end carousel -->
+        </div>
+
+        <div id="servicios" class="container">
+            <div class="row">
+                <div class="span8">
+                    <h2>Actividades</h2>
+                    <div class="row">
+                        <div class="span4">
+                            <ul>
+                                <li class="interlineado">Reformas integrales</li>
+                                <li class="interlineado">Reformas parciales</li>
+                                <li class="interlineado">Locales comerciales</li>
+                                <li class="interlineado">Servicios y mantenimiento a comunidades</li>
+                            </ul>
+                        </div>
+                        <div class="span4">
+                            <ul>
+                                    <li class="interlineado">Baños</li>
+                                    <li class="interlineado">Cocinas</li>
+                                    <li class="interlineado">Chalets</li>
+                                    <li class="interlineado">Nueva construcción</li>
+                            </ul>
+                        </div>
+                    </div>         
+                </div>
+                <div class="span4">
+                    <h2>Servicios</h2>         
+                    <ul>
+                        <li>Albañilería</li>
+                        <li>Fontanería</li>
+                        <li>Electricidad</li>
+                        <li>Carpintería aluminio y madera</li>
+                        <li>Pintura/Lacados</li>
+                        <li>Escayola</li>
+                        <li>Fachadas/Impermeabilizaciones</li>
+                        <li>Climatización/Calefacción</li>
+                        <li>Rehabilitaciones/Proyectos/Planos</li>
+                        <li>Permisos/Licencias</li>
+                    </ul>
+                                            
+                </div>
+            </div>
+        </div>      
+        <div id="empresa" class="container">
+            <hr>
+            <div class="row">
+                <div class="span12">
+                    <h2>La empresa</h2>
+                </div>          
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <p>Somos una empresa pequeña aunque la coordinación con excelentes profesionales (carpinteros, lacadores, pintores, electricistas, fontaneros etc...) habituados a trabajar en equipo a lo largo de los años logran que la ejecución sea impecable, sin demoras y con una excelente relación calidad precio.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <h3>Experiencia</h3>
+                     <p>Nuestra amplia experiencia en el sector, más de 23 años, dedicándonos a asesorar y ofrecer soluciones a nuestros clientes, en sus reformas integrales o parciales de viviendas, locales comerciales o chalets, rehabilitación y nueva construcción, nos avalan. </p>
+                </div>
+                <div class="span4">
+                    <h3>Calidad</h3>
+                     <p>La calidad de nuestros trabajos y la garantía que ofrecemos nos ha hecho contar con la confianza y la satisfacción de nuestros clientes. Nuestros precios son de lo más competitivos en el sector, sin renunciar por ello a la calidad tanto de los materiales como de la ejecución. </p>
+             </div>
+                <div class="span4">
+                    <h3>Alcance</h3>
+                    <p>Atendemos la zona de Alicante y los alrededores: San Vicente del Raspeig, San Juan (Pueblo y Playa), Campello, Elx, Mutxamel, Rebolledo, La Serreta, Urbanova y Los Arenales del sol. El trato es directo y cordial, sin dejar de ser serio y eficaz.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="trabajos">
+            <hr>
+            <div class="row">
+                <div class="span4">
+                    <h2>Trabajos</h2>
+                </div>
+                <div class="span4 text-center">
+                    <div id="close" class="back">&larr;</div>
+                </div>
+                <div class="span4 pull-right">
+                    <h3 id="name"></h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span12">  
+                    <section class="main">
+                        <div class="wrapper">   
+                            <ul id="tp-grid" class="tp-grid">
+
+                                <!-- Bryan Moats -->
+                                <li data-pile="Bryan Moats">
+                                    <a class="group-1" href="images/1/1.jpg"
+                                        title="Flu &amp; You">
+                                        <span class="tp-info"><span>Flu &amp; You</span></span>
+                                        <img src="images/1/1.jpg" />
+                                    </a>
+                                </li>
+                                <li data-pile="Bryan Moats">
+                                    <a class="group-1" href="images/1/2.jpg"
+                                        title="Test Your Flu IQ">
+                                        <span class="tp-info"><span>Test Your Flu IQ</span></span>
+                                        <img src="images/1/2.jpg" />
+                                    </a>
+                                </li>
+                                <li data-pile="Bryan Moats">
+                                    <a class="group-1" href="images/1/3.jpg"
+                                        title="Unexpected Fatherly Faces and Feelings">
+                                        <span class="tp-info"><span>Unexpected Fatherly Faces and Feelings</span></span>
+                                        <img src="images/1/3.jpg" />
+                                    </a>
+                                </li>
+
+                                <!-- Mike Dornseif -->
+                                <li data-pile="Mike Dornseif">
+                                    <a class="group-2" title="On to Easter" href="images/2/1.jpg">
+                                        <span class="tp-info"><span>On to Easter</span></span>
+                                        <img src="images/2/1.jpg" />
+                                    </a>
+                                </li>
+                                <li data-pile="Mike Dornseif">
+                                    <a class="group-2" title="Love Birds" href="images/2/2.jpg">
+                                        <span class="tp-info"><span>Love Birds</span></span>
+                                        <img src="images/2/2.jpg" />
+                                    </a>
+                                </li>
+                                <li data-pile="Mike Dornseif">
+                                    <a class="group-2" title="Here Fishy fishy" href="images/2/3.jpg">
+                                        <span class="tp-info"><span>Here Fishy fishy</span></span>
+                                        <img src="images/2/3.jpg" />
+                                    </a>
+                                </li>
+
+                                <!-- Griffin Moore -->
+                                <li data-pile="Griffin Moore">
+                                    <a href="http://drbl.in/fzUB">
+                                        <span class="tp-info"><span>Briefcase</span></span>
+                                        <img src="images/3/1.jpg" />
+                                    </a>
+                                </li>
+                                <li data-pile="Griffin Moore">
+                                    <a href="http://drbl.in/fQEv">
+                                        <span class="tp-info"><span>Clipboard</span></span>
+                                        <img src="images/3/2.jpg" />
+                                    </a>
+                                </li>
+                                <li data-pile="Griffin Moore">
+                                    <a href="http://drbl.in/fREU">
+                                        <span class="tp-info"><span>Sweet pack</span></span>
+                                        <img src="images/3/3.jpg" />
+                                    </a>
+                                </li>
+
+                                <!-- Andrea Austoni -->
+                                <li data-pile="Andrea Austoni">
+                                    <a href="http://drbl.in/cyWa">
+                                        <span class="tp-info"><span>Growth in 2012 (Holiday Card)</span></span>
+                                        <img src="images/4/1.jpg" />
+                                    </a>
+                                </li>
+                                <li data-pile="Andrea Austoni">
+                                    <a href="http://drbl.in/cRkb">
+                                        <span class="tp-info"><span>Grady Wilson</span></span>
+                                        <img src="images/4/2.jpg" />
+                                    </a>
+                                </li>
+                                <li data-pile="Andrea Austoni">
+                                    <a href="http://drbl.in/cSKM">
+                                        <span class="tp-info"><span>More Cowbell</span></span>
+                                        <img src="images/4/3.jpg" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="container" id="contacto">
+            <hr>
+            <div class="row">
+                <div class="span12">
+                    <h2>¡Contacte con nosotros!</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span5">
+                    <form class="form-inline">
+                        <fieldset>
+                            <legend>
+                                Nosotros le llamamos, sin compromiso                  
+                            </legend>
+                            <div class="controls-row">
+                                    <div class="control-group">
+                                        <label class="control-label" for="inputLlamame">
+                                            Introduzca su número de teléfono:
+                                        </label>
+                                        <div class="input-append">
+                                        <input type="text" class="span3" id="inputLlamame">
+                                        <div class="btn-group">
+                                            <button class="btn btn-inverse">Llámenme</button>
+                                        </div>
+                                    </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <legend> Llámenos directamente </legend>
+                    <div class="interlineado text-center">
+                        <i class="icon-mobile-phone icon-large"> 618 87 44 67</i>
+                    </div>
+                </div>
+
+                <div class="span7">
+                    <form class="form-inline">
+                        <fieldset>
+                            <legend>
+                                Envíenos un mensaje
+                            </legend>
+                            <div class="controls-row">
+                                <div class="control-group span2">
+                                    <label class="control-label" for="inputNombre">Nombre:</label>
+                                    <div class="controls">
+                                        <input type="text" class="span2" id="inputNombre">
+                                    </div>                  
+                                </div>
+                                <div class="control-group span2">
+                                    <label class="control-label" for="inputEmail">Email:</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputEmail" class="span2">
+                                    </div>
+                                </div>
+                                <div class="control-group span2">
+                                    <label class="control-label" for="inputTelefono">
+                                        Teléfono:
+                                    </label>
+                                    <div class="controls">
+                                        <input type="text" class="span2" id="inputTelefono">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="controls-row">
+                                <div class="control-group span6">
+                                    <label class="control-label">Mensaje:</label>
+                                    <div class="controls">
+                                        <textarea rows="7" class="span6"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions text-right">
+                                <div class="control-group span6">
+                                    <button class="btn btn-inverse">Enviar mensaje</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>       
+                </div>          
+            </div>
+            <hr/>
+        </div> <!-- /container -->
+        
+        <footer class="container">
+            <p>Bascuñana: reformas y construcciones &copy 2013</p>
+        </footer>
+        <!-- Javascript -->
+        <script data-main="{% static 'js/app.js' %}" src="{% static 'js/lib/require.js' %}"></script>
+    </body>
+</html>
