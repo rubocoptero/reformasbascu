@@ -36,6 +36,12 @@ span.skype_pnh_print_container {
 	font-weight: 400;
 }
 
+.miniatura
+{
+    width: 250px;
+    height: 188px;
+}
+
 .tag
 {
 	margin: 1em;

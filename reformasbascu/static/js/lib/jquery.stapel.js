@@ -194,14 +194,14 @@
 		// (to give a more realistic pile effect)
 		pileAngles : 2,
 		// animation settings for the clicked pile's items
-		pileAnimation : { 
+		pileAnimation : {
 			openSpeed : 400,
 			openEasing : 'ease-in-out', // try this :) 'cubic-bezier(.47,1.34,.9,1.03)',
 			closeSpeed : 400,
 			closeEasing : 'ease-in-out'
 		},
 		// animation settings for the other piles
-		otherPileAnimation : { 
+		otherPileAnimation : {
 			openSpeed : 400,
 			openEasing : 'ease-in-out',
 			closeSpeed : 350,
