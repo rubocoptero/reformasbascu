@@ -189,6 +189,7 @@ DJANGO_APPS = (
 THIRD_PARTY_APPS = (
     # Database migration helpers:
     'south',
+    'crispy_forms',
 )
 
 # Apps specific for this project go here.
@@ -241,3 +242,5 @@ WSGI_APPLICATION = '%s.wsgi.application' % SITE_NAME
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+CRISPY_TEMPLATE_PACK = 'bootstrap'
