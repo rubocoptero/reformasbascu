@@ -16,6 +16,7 @@ class ContactForm(forms.Form):
     )
     phone_number = ESPhoneNumberField(
         label='Número de teléfono:',
+        required = False,
     )
     message = forms.CharField(
         widget = forms.Textarea(),
@@ -28,7 +29,7 @@ class ContactForm(forms.Form):
         self.helper.form_id = 'id-contactForm'
         self.helper.form_class = 'form-inline'
         self.helper.form_method = 'post'
-        self.helper.form_action = 'home'
+        self.helper.form_action = '/#contacto'
 
         self.helper.layout = Layout(
             Div(
@@ -37,7 +38,9 @@ class ContactForm(forms.Form):
                 Field(
                     'phone_number',
                     wrapper_class='span2', 
-                    css_class='span2'),
+                    css_class='span2',
+                    placeholder='Opcional',
+                ),
                 css_class='controls-row',
             ),
             Div(
@@ -50,7 +53,7 @@ class ContactForm(forms.Form):
             FormActions(
                 Div(
                     Submit(
-                        'enviar', 
+                        'submit', 
                         'Enviar mensaje', 
                         css_class='btn-inverse', 
                         style='margin-right: 1em;',
@@ -74,12 +77,12 @@ class CallMeForm(forms.Form):
         self.helper.form_id = 'id-callMeForm'
         self.helper.form_class = 'form-inline text-left'
         self.helper.form_method = 'post'
-        self.helper.form_action = 'home'
+        self.helper.form_action = '/#contacto'
 
         self.helper.layout = Layout(
             FieldWithButtons('phone_number', 
                 Submit(
-                    'llamenme',
+                    'submit',
                     'Llámenme'.decode('utf-8'), 
                     css_class='btn-inverse'
                 )

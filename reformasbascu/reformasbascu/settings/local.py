@@ -1,6 +1,5 @@
 """Development settings and globals."""
 
-
 from os.path import join, normpath
 
 from base import *
@@ -18,6 +17,7 @@ TEMPLATE_DEBUG = DEBUG
 ########## EMAIL CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 ########## END EMAIL CONFIGURATION
 
 

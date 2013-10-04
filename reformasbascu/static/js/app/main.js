@@ -1,7 +1,7 @@
 // Bootstrap jQuery plugins
 require(['jquery', 'lib/jquery.stapel', 'lib/jquery.colorbox-min', 'bootstrap'], function ($) {
     $(document).ready(function() {
-        // Bootstrap
+        // Bootstrap carousel
         $('.carousel').carousel({
           interval: 4000
         });
@@ -44,11 +44,28 @@ require(['jquery', 'lib/jquery.stapel', 'lib/jquery.colorbox-min', 'bootstrap'],
             }
         }, 0);
 
+        // Bootstrap scrollspy
         $('[data-spy="scroll"]').each(function () {
             var $spy = $(this).scrollspy({
                 offset: 50,
                 refresh: 'refresh'
             });
         });
+
+        // Bootstrap modal
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+        var action_value = getParameterByName('action');
+
+        if (action_value !== "") {
+            if (action_value === "gracias") {
+                $('#graciasModal').modal();
+            }
+        }
     });
 });
