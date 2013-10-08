@@ -70,8 +70,10 @@ SECRET_KEY = get_env_setting('SECRET_KEY')
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = [
     '.reformasbascu.herokuapp.com', 
-    '.reformasbascu.com',
+    '.reformasbascu.es',
     '.reformasbascu-staging.herokuapp.com',
     '*',
 ]
 ########## END SITE CONFIGURATION
+
+DEBUG = environ.get('DEBUG', False)
