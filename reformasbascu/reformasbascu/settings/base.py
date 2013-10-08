@@ -190,6 +190,7 @@ THIRD_PARTY_APPS = (
     # Database migration helpers:
     'south',
     'crispy_forms',
+    'localflavor',
 )
 
 # Apps specific for this project go here.

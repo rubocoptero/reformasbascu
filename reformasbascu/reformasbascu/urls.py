@@ -7,6 +7,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'render.views.home', name='home'),
+    url(r'^gallery', 'render.views.gallery', name='gallery'),
 
     # Examples:
     # url(r'^$', 'reformasbascu.views.home', name='home'),

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django import forms
-from django.contrib.localflavor.es.forms import ESPhoneNumberField
+from localflavor.es.forms import ESPhoneNumberField
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit, Field, Div
 from crispy_forms.bootstrap import FieldWithButtons, FormActions

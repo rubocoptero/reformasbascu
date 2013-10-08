@@ -1,0 +1,11 @@
+{% for album, photos in albums.iteritems %}
+    {% for photo in photos %}
+        <li data-pile="{{album}}">
+            <a class="group-{{forloop.parentloop.counter}}" href="{{photo.photo.url}}"
+        title="{{photo.title}}">
+        <span class="tp-info"><span>{{photo.title}}</span></span>
+        <img class="miniatura" src="{{photo.photo.url}}" />
+    </a>
+</li>
+    {% endfor %}
+{% endfor %}

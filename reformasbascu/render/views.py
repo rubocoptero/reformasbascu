@@ -36,6 +36,14 @@ def home(request):
         context_instance=RequestContext(request),
     )
 
+def gallery(request):
+    albums = Photo.objects.gallery_by_album()
+
+    return render_to_response(
+        "gallery.html",
+        locals()
+    )
+
 def process_valid_contact_form(form):
     name = form.cleaned_data['name']
     email = form.cleaned_data['email']
@@ -44,7 +52,7 @@ def process_valid_contact_form(form):
 
     send_mail(
         '[reformasbascu.es] Mensaje de ' + name,
-        phone_number + '\n\n' + message,
+        email + " " + phone_number + '\n\n' + message,
         email,
         ['reformasbascu@gmail.com']
     )
