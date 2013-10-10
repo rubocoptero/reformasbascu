@@ -96,6 +96,8 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'compressor.finders.CompressorFinder',
 )
 ########## END STATIC FILE CONFIGURATION
 
@@ -191,6 +193,7 @@ THIRD_PARTY_APPS = (
     'south',
     'crispy_forms',
     'localflavor',
+    'compressor',
 )
 
 # Apps specific for this project go here.
@@ -245,3 +248,5 @@ WSGI_APPLICATION = '%s.wsgi.application' % SITE_NAME
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap'
+
+COMPRESS_ENABLED = True

@@ -1,5 +1,6 @@
 {% load staticfiles %}
 {% load crispy_forms_tags %}
+{% load compress %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="es" class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -8,25 +9,29 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Bascuñana: reformas y construcciones en Alicante</title>
+        <title>Bascuñana: reformas y construcciones en Alicante y provincia</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="****Rellenar****">
+        <meta name="description" content="Su empresa de reformas en Alicante y provincia. Amplia gama de servicios: reformas integrales o parciales de viviendas, baños, cocinas, locales comerciales, chalets, rehabilitación y nueva construcción.">
         <meta name="author" content="@rubocoptero">
 
         <!-- Styles -->
+        {% compress css %}
+
         <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
         <link href="{% static 'css/bootstrap-responsive.min.css' %}" rel="stylesheet">
         <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
         <link href="{% static 'css/stapel.css' %}" rel="stylesheet">
         <link href="{% static 'css/colorbox.css' %}" rel="stylesheet">
-        <link href="{% static 'css/main.css' %}" rel="stylesheet">
+        <link href="{% static 'css/main.css' %}" rel="stylesheet">        
+
+        {% endcompress %}
 
         <!-- Javascript -->
         <script src="{% static 'js/lib/modernizr-2.6.2-respond-1.1.0.min.js' %}"></script>
 
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Jockey+One' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Capriola' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
     </head>
     <body data-spy="scroll" data-target=".nav" data-offset="50">
         <!--[if lt IE 7]>
