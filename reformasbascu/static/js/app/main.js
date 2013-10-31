@@ -48,6 +48,28 @@ require(['jquery', 'lib/jquery.stapel', 'lib/jquery.colorbox-min', 'bootstrap'],
                 delay : 50,
                 onLoad : function() {
                   $loader.remove();
+                    // Colorbox
+                    setTimeout(function(){
+                        var root = ".group-";
+                        var i = 1;
+
+                        var colorboxFactory = function(groupName) {
+                            return function() {
+                                $(groupName).colorbox({
+                                    rel:groupName,
+                                    slideshow:true,
+                                    maxWidth: '95%',
+                                    maxHeight: '95%'
+                                });
+                            };
+                        };
+
+                        while($(groupname = root + i++).length !== 0)
+                        {
+                            $(groupname + "-parent").last()
+                                .one("click", colorboxFactory(groupname));
+                        }
+                    }, 0);
                 },
                 onBeforeOpen : function( pileName ) {
                   $name.html( pileName );
@@ -62,30 +84,7 @@ require(['jquery', 'lib/jquery.stapel', 'lib/jquery.colorbox-min', 'bootstrap'],
               $close.hide();
               $name.empty();
               stapel.closePile();
-            });
-
-            // Colorbox
-            setTimeout(function(){
-                var root = ".group-";
-                var i = 1;
-
-                var colorboxFactory = function(groupName) {
-                    return function() {
-                        $(groupName).colorbox({
-                            rel:groupName,
-                            slideshow:true,
-                            maxWidth: '95%',
-                            maxHeight: '95%'
-                        });
-                    };
-                };
-
-                while($(groupname = root + i++).length !== 0)
-                {
-                    $(groupname + "-parent").last()
-                        .one("click", colorboxFactory(groupname));
-                }
-            }, 0);
+            });            
         });
     });
 });
