@@ -1,6 +1,6 @@
 {% for album, photos in albums.iteritems %}
     {% for photo in photos %}
-        <li data-pile="{{album}}">
+        <li data-pile="{{album}}" class="group-{{forloop.parentloop.counter}}-parent">
             <a class="group-{{forloop.parentloop.counter}}" href="{{photo.photo.url}}"
         title="{{photo.title}}">
         <span class="tp-info"><span>{{photo.title}}</span></span>

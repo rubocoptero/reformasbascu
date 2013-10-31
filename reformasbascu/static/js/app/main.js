@@ -69,12 +69,21 @@ require(['jquery', 'lib/jquery.stapel', 'lib/jquery.colorbox-min', 'bootstrap'],
                 var root = ".group-";
                 var i = 1;
 
+                var colorboxFactory = function(groupName) {
+                    return function() {
+                        $(groupName).colorbox({
+                            rel:groupName,
+                            slideshow:true,
+                            maxWidth: '95%',
+                            maxHeight: '95%'
+                        });
+                    };
+                };
+
                 while($(groupname = root + i++).length !== 0)
                 {
-                    $(groupname).colorbox({
-                        rel:groupname,
-                        slideshow:true
-                    });
+                    $(groupname + "-parent").last()
+                        .one("click", colorboxFactory(groupname));
                 }
             }, 0);
         });
