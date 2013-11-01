@@ -27,26 +27,26 @@ class ContactForm(forms.Form):
         super(ContactForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.form_id = 'id-contactForm'
-        self.helper.form_class = 'form-inline'
+        self.helper.form_class = 'form-inline span11'
         self.helper.form_method = 'post'
         self.helper.form_action = '/#contacto'
 
         self.helper.layout = Layout(
             Div(
-                Field('name', wrapper_class='span2', css_class='span2'),
-                Field('email', wrapper_class='span2', css_class='span2'),
+                Field('name', wrapper_class='span4', css_class='span12'),
+                Field('email', wrapper_class='span4', css_class='span12'),
                 Field(
                     'phone_number',
-                    wrapper_class='span2', 
-                    css_class='span2',
+                    wrapper_class='span4', 
+                    css_class='span12',
                     placeholder='Opcional',
                 ),
                 css_class='controls-row',
             ),
             Div(
                 Div(
-                    Field('message', css_class='span6'), 
-                    css_class='span6'
+                    Field('message', css_class='span12'), 
+                    css_class='span12'
                 ), 
                 css_class='controls-row',
             ),
@@ -55,10 +55,9 @@ class ContactForm(forms.Form):
                     Submit(
                         'submit', 
                         'Enviar mensaje', 
-                        css_class='btn-inverse', 
-                        style='margin-right: 1em;',
+                        css_class='btn-inverse',
                     ),
-                    css_class='control-group span6'
+                    css_class='control-group span12'
                 ),
                 css_class='form-actions text-right',
             ),

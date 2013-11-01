@@ -22,9 +22,11 @@ span.skype_pnh_print_container {
     display: inline !important;
 }
 
-.brand
+#logo
 {
-	width: 10%;
+	width: 8em;
+    padding: 0.25em;
+    margin-left: 0;
 }
 
 .interlineado
@@ -60,7 +62,23 @@ span.skype_pnh_print_container {
 	font-size: 20px;
 }
 
+@media (max-width: 979px) {
+    body {
+        padding-top: 0;
+    }
+}
 
+@media (max-width: 369px) {
+    .telefono-cabecera {
+        font-size: 1em;
+        padding: 0.25em;
+        margin: 0.25em;
+    }
+
+    #tp-grid {
+        margin: 0;
+    }
+}
 /* Bootstrap */
 
 

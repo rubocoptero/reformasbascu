@@ -41,12 +41,12 @@
         <nav class="navbar navbar-fixed-top navbar-inverse">
             <div class="navbar-inner">
                 <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="#">
+                    <a href="#">
                         <img id="logo" src="{% static 'img/logo.png' %}" alt="Bascuñana">
                     </a>
                     <span class=" telefono-cabecera text-center">
@@ -91,10 +91,10 @@
         </div>
 
         <div id="servicios" class="container">
-            <div class="row">
+            <div class="row-fluid">
                 <div class="span8">
                     <h2>Actividades</h2>
-                    <div class="row">
+                    <div class="row-fluid">
                         <div class="span4">
                             <ul>
                                 <li class="interlineado">Reformas integrales</li>
@@ -133,17 +133,17 @@
         </div>      
         <div id="empresa" class="container">
             <hr>
-            <div class="row">
+            <div class="row-fluid">
                 <div class="span12">
                     <h2>La empresa</h2>
                 </div>          
             </div>
-            <div class="row">
+            <div class="row-fluid">
                 <div class="span12">
                     <p>Somos una empresa pequeña, aunque la coordinación con excelentes profesionales (carpinteros, lacadores, pintores, electricistas, fontaneros etc...) habituados a trabajar en equipo a lo largo de los años logran que la ejecución sea impecable, sin demoras y con una excelente relación calidad precio.</p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row-fluid">
                 <div class="span4">
                     <h3>Experiencia</h3>
                      <p>Nuestra amplia experiencia en el sector, más de 23 años, dedicándonos a asesorar y ofrecer soluciones a nuestros clientes, en sus reformas integrales o parciales de viviendas, locales comerciales o chalets, rehabilitación y nueva construcción, nos avalan. </p>
@@ -161,7 +161,7 @@
 
         <div class="container" id="trabajos">
             <hr>
-            <div class="row">
+            <div class="row-fluid">
                 <div class="span4">
                     <h2>Trabajos</h2>
                 </div>
@@ -173,7 +173,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row-fluid">
                 <div class="span12">  
                     <section class="main">
                         <div class="wrapper">   
@@ -189,18 +189,18 @@
         <!-- Contact with Django forms -->
         <div class="container" id="contacto">
             <hr>
-            <div class="row">
+            <div class="row-fluid">
                 <div class="span12">
                     <h2>¡Contacte con nosotros!</h2>
                 </div>
             </div>
-            <div class="row">
+            <div class="row-fluid">
                 <div class="span5">
                         <fieldset>
                             <legend>
                                 Nosotros le llamamos, sin compromiso                  
                             </legend>
-                            <div class="span4 text-center">
+                            <div class="span11 text-center">
                             {% crispy call_me_form %}  
                             </div>
 
