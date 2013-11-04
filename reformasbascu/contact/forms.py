@@ -44,11 +44,8 @@ class ContactForm(forms.Form):
                 css_class='controls-row',
             ),
             Div(
-                Div(
-                    Field('message', css_class='span12'), 
-                    css_class='span12'
-                ), 
-                css_class='controls-row',
+                Field('message', css_class='input-block-level'), 
+                css_class='span12'
             ),
             FormActions(
                 Div(

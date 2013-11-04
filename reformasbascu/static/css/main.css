@@ -68,6 +68,24 @@ span.skype_pnh_print_container {
     }
 }
 
+@media (max-width: 769px) {
+    .carousel-control {
+        background: none;
+    }
+
+    .interlineado {
+        font-size: inherit;
+        padding: 0.15em;
+    }
+
+    .slide {
+        margin-left: -1em;
+        margin-right: -1em;
+        margin-top: -1em;
+        margin-bottom: 0.5em;
+    }
+}
+
 @media (max-width: 369px) {
     .telefono-cabecera {
         font-size: 1em;
