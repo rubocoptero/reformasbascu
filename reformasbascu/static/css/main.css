@@ -71,6 +71,7 @@ span.skype_pnh_print_container {
 @media (max-width: 769px) {
     .carousel-control {
         background: none;
+        border: 0;
     }
 
     .interlineado {
