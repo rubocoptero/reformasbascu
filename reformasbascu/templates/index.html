@@ -1,70 +1,8 @@
-{% load staticfiles %}
+{% extends "base.html" %}
 {% load crispy_forms_tags %}
-{% load compress %}
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="es" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="es" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Bascuñana: reformas y construcciones en Alicante y provincia</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Su empresa de reformas en Alicante y provincia. Amplia gama de servicios: reformas integrales o parciales de viviendas, baños, cocinas, locales comerciales, chalets, rehabilitación y nueva construcción.">
-        <meta name="author" content="@rubocoptero">
+{% load staticfiles %}
 
-        <!-- Styles -->
-        {% compress css %}
-
-        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-        <link href="{% static 'css/bootstrap-responsive.min.css' %}" rel="stylesheet">
-        <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
-        <link href="{% static 'css/stapel.css' %}" rel="stylesheet">
-        <link href="{% static 'css/colorbox.css' %}" rel="stylesheet">
-        <link href="{% static 'css/main.css' %}" rel="stylesheet">        
-
-        {% endcompress %}
-
-        <!-- Javascript -->
-        <script src="{% static 'js/lib/modernizr-2.6.2-respond-1.1.0.min.js' %}"></script>
-
-        <!-- Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Jockey+One' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-    </head>
-    <body data-spy="scroll" data-target=".nav" data-offset="50">
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-
-        <nav class="navbar navbar-fixed-top navbar-inverse">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a href="#">
-                        <img id="logo" src="{% static 'img/logo.png' %}" alt="Bascuñana">
-                    </a>
-                    <span class=" telefono-cabecera text-center">
-                        <i class="icon-mobile-phone icon-large"><span> 618 87 44 67</span></i>
-                    </span>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active"><a href="#inicio">Inicio</a></li>
-                            <li><a href="#servicios">Servicios</a></li>
-                            <li><a href="#empresa">La empresa</a></li>
-                            <li><a href="#trabajos">Trabajos</a></li>
-                            <li><a href="#contacto">Contacto</a></li>
-                        </ul><!-- /.nav -->
-                    </div><!--/.nav-collapse -->
-                </div><!-- /.container -->
-            </div><!-- /.navbar-inner -->
-        </nav><!-- /.navbar -->
-
+{% block content %}
         <div id="inicio" class="container">
             <!--  Carousel -->
             <div id="this-carousel-id" class="carousel slide">
@@ -222,12 +160,7 @@
                         </fieldset>     
                 </div>          
             </div>
-            <hr/>
         </div> <!-- /container -->
-        
-        <footer class="container">
-            <p>Bascuñana: reformas y construcciones &copy 2013</p>
-        </footer>
 
         <!-- Modal -->
         <div id="graciasModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -242,8 +175,9 @@
                 <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
             </div>
         </div>
-        
-        <!-- Javascript -->
+
+{% endblock content %}        
+
+{% block extra_js %}
         <script data-main="{% static 'js/app.js' %}" src="{% static 'js/lib/require.js' %}"></script>
-    </body>
-</html>
+{% endblock extra_js %}

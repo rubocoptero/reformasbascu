@@ -1,9 +1,36 @@
 {% extends "base.html" %}
 
-{% block title %}Page Not found{% endblock %}
-
-{% block page_title %}Page Not found{% endblock page_title %}
-
 {% block content %}
-<p>This is not the page you were looking for.</p>
+<div class="text-center" style="margin: 0 auto; width: 75%;">
+    <div class="text-left">
+<h1>Página no encontrada</h1>
+<p>Lo sentimos, pero la página a la que trata de acceder no existe.</p>
+<p>Esto puede ser resultado de:</p>
+<ul>
+    <li>Una dirección mal escrita.</li>
+    <li>Un enlace desactualizado.</li>
+</ul>
+<p>
+    <div class="text-center">
+    <a href="{% url 'home' %}" class="btn btn-large btn-inverse" type="button">
+        Visita la página principal
+    </a>
+</div>
+</p>
+</div>
+</div>
+
 {% endblock content %}
+
+{% block extra_js %}
+    <script type="text/javascript">
+        var parentNavLinks = document.getElementsByClassName("nav")[0];
+        if (parentNavLinks.children.length) {
+            var navLinks = parentNavLinks.children;
+            for(var i = 0; i < navLinks.length; i++) {
+                navLinks[i].firstElementChild.attributes['href'].value = 
+                    '/' + navLinks[i].firstElementChild.attributes['href'].value;
+            }
+        }
+    </script>
+{% endblock extra_js %}
