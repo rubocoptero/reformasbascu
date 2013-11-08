@@ -50,7 +50,7 @@ class ContactForm(forms.Form):
             FormActions(
                 Div(
                     Submit(
-                        'submit', 
+                        'submitMessage', 
                         'Enviar mensaje', 
                         css_class='btn-inverse',
                     ),
@@ -63,7 +63,7 @@ class ContactForm(forms.Form):
         self.helper.html5_required = True
 
 class CallMeForm(forms.Form):
-    phone_number = ESPhoneNumberField(
+    call_phone = ESPhoneNumberField(
         label='Introduzca su número de teléfono:',
     )
 
@@ -76,9 +76,9 @@ class CallMeForm(forms.Form):
         self.helper.form_action = '/#contacto'
 
         self.helper.layout = Layout(
-            FieldWithButtons('phone_number', 
+            FieldWithButtons('call_phone', 
                 Submit(
-                    'submit',
+                    'submitNumber',
                     'Llámenme'.decode('utf-8'), 
                     css_class='btn-inverse'
                 )

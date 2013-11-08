@@ -9,14 +9,14 @@ from django.core.mail import send_mail
 
 def home(request):
     if request.method == 'POST':
-        if request.POST['submit'] == 'Enviar mensaje':
+        if len(request.POST) > 3:
             contact_form = ContactForm(request.POST)
             if contact_form.is_valid():
                 process_valid_contact_form(contact_form)
                 return HttpResponseRedirect('/?action=gracias')
             else:
                 call_me_form = CallMeForm()
-        else:
+        elif len(request.POST) > 1:
             call_me_form = CallMeForm(request.POST)
             if call_me_form.is_valid():
                 process_valid_call_me_form(call_me_form)
@@ -58,7 +58,7 @@ def process_valid_contact_form(form):
     )
 
 def process_valid_call_me_form(form):
-    phone_number = form.cleaned_data['phone_number']
+    phone_number = form.cleaned_data['call_phone']
 
     send_mail(
         '[reformasbascu.es] Llámame',
