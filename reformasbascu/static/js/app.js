@@ -18,6 +18,9 @@ requirejs.config({
         'lib/jquery.colorbox-min': {
             deps: ['jquery'],
             exports: 'jQuery.fn.colorbox'
+        },
+        'lib/cookie-consent.min.js': {
+            deps: ['jquery']
         }
     }
 });
