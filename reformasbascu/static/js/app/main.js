@@ -1,6 +1,57 @@
 // Bootstrap jQuery plugins
-require(['jquery', 'lib/jquery.stapel', 'lib/jquery.colorbox-min', 'bootstrap'], function ($) {
+require([
+    'lib/cookie-consent.min',
+    'lib/jquery.stapel',
+    'lib/jquery.colorbox-min',
+    'bootstrap'
+    ],
+    function () {
     $(document).ready(function() {
+        // Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent
+            // <![CDATA[
+            cc.initialise({
+                cookies: {
+                    analytics: {
+                        title: 'Analítica',
+                        description: 'De manera anónima analizamos su u'+
+                        'so de este sitio web con el fi'+
+                        'n de mejorar su experiencia.'
+                    }
+                },
+                settings: {
+                    consenttype: "implicit",
+                    bannerPosition: "bottom",
+                    onlyshowbanneronce: true,
+                    disableallsites: true
+                },
+                strings: {
+                    analyticsDefaultTitle: 'Analítica',
+                    analyticsDefaultDescription: 'De manera anónima analizamos su uso de este sitio web con el fin de mejorar su experiencia.',
+                    closeWindow: 'Cerrar',
+                    learnMore: 'Más información',
+                    notificationTitleImplicit: 'Usamos cookies para asegurar que obtiene una mejor experiencia en nuestro sitio web.',
+                    notificationTitle: 'Su experiencia en este sitio web mejorará permitiendo el uso, de cookies.',
+                    seeDetails: 'ver detalles',
+                    customCookie: 'Este sitio web usa un tipo personalizado de cookies que nece,sita aprobación específica.',
+                    seeDetailsImplicit: 'cambie sus preferencias',
+                    hideDetails: 'ocultar detalles',
+                    allowCookies: 'Permitir cookies',
+                    allowCookiesImplicit: 'Cerrar',
+                    allowForAllSites: 'Permitir cookies para todos los sitios',
+                    savePreference: 'Guardar preferencias',
+                    saveForAllSites: 'Guardar para todos los sitios',
+                    privacySettings: 'Preferencias de privacidad',
+                    privacySettingsDialogTitleA: 'Preferencias de privacidad',
+                    privacySettingsDialogSubtitle: 'Algunas características de este sitio necesitan tu consentimiento para recordarle.',
+                    privacySettingsDialogTitleB: 'para este sitio web',
+                    preferenceConsent: 'Consiento',
+                    preferenceDecline: 'Declino',
+                    notUsingCookies: 'Este sitio web no usará cookies.'
+                }
+            });
+            // ]]>
+        // End Cookie Consent plugin
+
         // Bootstrap carousel
         $('.carousel').carousel({
           interval: 4000
@@ -84,7 +135,7 @@ require(['jquery', 'lib/jquery.stapel', 'lib/jquery.colorbox-min', 'bootstrap'],
               $close.hide();
               $name.empty();
               stapel.closePile();
-            });            
+            });
         });
     });
 });
